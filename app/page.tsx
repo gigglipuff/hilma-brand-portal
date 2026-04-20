@@ -1,4 +1,26 @@
-const sections = [
+type Section = {
+  id: string;
+  label: string;
+  title: string;
+  hero: string;
+  color: string;
+  body: string;
+  contentsLines?: string[];
+  principles?: { title: string; body: string }[];
+  colors?: { hex: string; name: string }[];
+  subsections?: {
+    id: string;
+    title: string;
+    body: string;
+    images: string[];
+    carousel?: boolean;
+    downloadLabel?: string;
+    promptHeader?: string;
+    prompt?: string;
+  }[];
+};
+
+const sections: Section[] = [
   {
     id: "designprinciper",
     label: "DESIGNPRINCIPER",
